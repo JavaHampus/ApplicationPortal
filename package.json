@@ -1,0 +1,35 @@
+{
+  "name": "fivex-application-1",
+  "version": "1.0.0",
+  "description": "An application portal for FiveM Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavaHampus/FiveX-Application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavaHampus/FiveX-Application/issues"
+  },
+  "homepage": "https://github.com/JavaHampus/FiveX-Application#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "discord.js": "^14.13.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "form-data": "^4.0.0",
+    "mongoose": "^7.6.3",
+    "node-fetch": "^2.6.6",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/express-session": "^1.17.9",
+    "@types/node-fetch": "^2.6.7"
+  }
+}

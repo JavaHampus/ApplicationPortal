@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: "Gabarito";
+        font-size: 15px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="public/nytt projekt (19).png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+  </head>
+  <body>
+    <%- include('./css/style'); %>
+    <div>
+        <%- include('./css/application'); %>
+
+      <div class="application-container">
+        <div class="application-container1">
+          <div class="application-container2">
+            <h1 class="application-text">Complete Application</h1>
+            <span class="application-text1">Not Completed</span>
+            <span class="application-text2" style="margin-top: 6px;">Go Back</span>
+            <div class="application-container3">
+              <div class="application-container4">
+                <form action="/application/submit?department=<%= applicationObject.id %>" method="post">
+                <% for (let i = 0; i < applicationObject.applicationQuestions.length; i++) { %>
+                    <% if(applicationObject.applicationQuestions[i].type == "short") { %>
+                        <div class="application-container5">
+                            <span class="application-text2"><%= applicationObject.applicationQuestions[i].title %> *</span>
+                            <input
+                            type="text"
+                            name="applicationQuestion<%= i %>"
+                            placeholder="Type here..."
+                            class="application-textinput input"
+                            />
+                        </div>
+                    <% } %>
+                    <% if(applicationObject.applicationQuestions[i].type == "long") { %>
+                        <div class="application-container7">
+                            <span class="application-text4">
+                              <%= applicationObject.applicationQuestions[i].title %> *
+                            </span>
+                            <textarea
+                              name="applicationQuestion<%= i %>"
+                              placeholder="Type Here..."
+                              class="application-textarea textarea"
+                            ></textarea>
+                        </div>
+                    <% } %>
+                <% } %>    
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let applicationQCount = 0;
+        let completedQCount = 0;
+        let completed = false;
+
+        $(document).ready(function() {
+            var allFilledOut = true;
+            $(".input").each(function() {
+                applicationQCount++;
+            });
+
+            $(".textarea").each(function() {
+                applicationQCount++;
+            });
+
+            $(".application-text1").text("Not Completed " + "(" + 0 + "/" + applicationQCount + ")");
+        });
+
+        $(".input, .textarea").change(function() {
+            const val = $(this).val();
+            if(val.length > 0) {
+                completedQCount++;
+                $(".application-text1").text("Not Completed " + "(" + completedQCount + "/" + applicationQCount + ")");
+            } else {
+                completedQCount--;
+                $(".application-text1").text("Not Completed " + "(" + completedQCount + "/" + applicationQCount + ")");
+            }
+
+            if(completedQCount == applicationQCount) {
+                completed = true;
+                $(".application-text1").text("Submit Application");
+            }
+        });
+
+        $(".application-text1").click(function() {
+            if(!completed) return;
+            // if the field is input send "type" : "short" with the form
+            // if the field is textarea send "type" : "long" with the form
+            $("form").submit();
+        });
+
+        $(".application-text2").click(function() {
+            window.location.href = "/departments";
+        });
+    </script>
+  </body>
+</html>

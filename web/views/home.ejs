@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: "Gabarito";
+        font-size: 15px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="public/nytt projekt (19).png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+  </head>
+  <body>
+    <%- include('./css/style'); %>
+    <div>
+        <%- include('./css/home'); %>
+
+      <div class="add-container">
+        <div class="add-container1">
+          <img
+            alt="image"
+            src="https://cdn.discordapp.com/attachments/1160957812256551035/1167867947885285476/fb2c49ea57e59394b1d05a005ac5774fd121fea5.png?ex=654fb0c8&amp;is=653d3bc8&amp;hm=bf69be5d5a4dd4aacd43c1233661cc03286b36436a953cdd67835d13dc02c8c3&amp;"
+            class="add-image"
+          />
+          <span class="add-text">Your Server RP</span>
+          <h1 class="add-text1">Application Portal</h1>
+          <div class="add-container2">
+            <button type="button" class="add-button button">
+              <svg viewBox="0 0 952.5394285714285 1024" class="add-icon">
+                <path
+                  d="M936.571 273.143c14.286 20.571 18.286 47.429 10.286 73.714l-157.143 517.714c-14.286 48.571-64.571 86.286-113.714 86.286h-527.429c-58.286 0-120.571-46.286-141.714-105.714-9.143-25.714-9.143-50.857-1.143-72.571 1.143-11.429 3.429-22.857 4-36.571 0.571-9.143-4.571-16.571-3.429-23.429 2.286-13.714 14.286-23.429 23.429-38.857 17.143-28.571 36.571-74.857 42.857-104.571 2.857-10.857-2.857-23.429 0-33.143 2.857-10.857 13.714-18.857 19.429-29.143 15.429-26.286 35.429-77.143 38.286-104 1.143-12-4.571-25.143-1.143-34.286 4-13.143 16.571-18.857 25.143-30.286 13.714-18.857 36.571-73.143 40-103.429 1.143-9.714-4.571-19.429-2.857-29.714 2.286-10.857 16-22.286 25.143-35.429 24-35.429 28.571-113.714 101.143-93.143l-0.571 1.714c9.714-2.286 19.429-5.143 29.143-5.143h434.857c26.857 0 50.857 12 65.143 32 14.857 20.571 18.286 47.429 10.286 74.286l-156.571 517.714c-26.857 88-41.714 107.429-114.286 107.429h-496.571c-7.429 0-16.571 1.714-21.714 8.571-4.571 6.857-5.143 12-0.571 24.571 11.429 33.143 50.857 40 82.286 40h527.429c21.143 0 45.714-12 52-32.571l171.429-564c3.429-10.857 3.429-22.286 2.857-32.571 13.143 5.143 25.143 13.143 33.714 24.571zM328.571 274.286c-3.429 10.286 2.286 18.286 12.571 18.286h347.429c9.714 0 20.571-8 24-18.286l12-36.571c3.429-10.286-2.286-18.286-12.571-18.286h-347.429c-9.714 0-20.571 8-24 18.286zM281.143 420.571c-3.429 10.286 2.286 18.286 12.571 18.286h347.429c9.714 0 20.571-8 24-18.286l12-36.571c3.429-10.286-2.286-18.286-12.571-18.286h-347.429c-9.714 0-20.571 8-24 18.286z"
+                ></path>
+              </svg>
+              <span class="add-text2"><a href="/departments">View Applications</a></span>
+            </button>
+            <button type="button" class="add-button1 button">
+              <svg viewBox="0 0 804.5714285714286 1024" class="add-icon2">
+                <path
+                  d="M804.571 420.571v109.714c0 30.286-24.571 54.857-54.857 54.857h-237.714v237.714c0 30.286-24.571 54.857-54.857 54.857h-109.714c-30.286 0-54.857-24.571-54.857-54.857v-237.714h-237.714c-30.286 0-54.857-24.571-54.857-54.857v-109.714c0-30.286 24.571-54.857 54.857-54.857h237.714v-237.714c0-30.286 24.571-54.857 54.857-54.857h109.714c30.286 0 54.857 24.571 54.857 54.857v237.714h237.714c30.286 0 54.857 24.571 54.857 54.857z"
+                ></path>
+              </svg>
+              <span class="add-text3"><a href="/@me">My Applications</a></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      console.log("This project was made by hampuiz on discord! Add for commissions!");
+    </script>
+  </body>
+</html>
